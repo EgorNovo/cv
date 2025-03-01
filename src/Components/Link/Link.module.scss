@@ -1,0 +1,31 @@
+.li {
+	list-style: none;
+
+	& a {
+		position: relative;
+		text-decoration: none;
+		text-decoration-line: none;
+		color: inherit;
+	}
+
+	& a::before, a::after {
+		opacity: 0;
+	}
+
+  & a:hover::before, a:hover::after {
+		opacity: 1;
+		transition: opacity 0.3s;
+	}
+
+	& a:hover::before {
+		content: "(";
+		position: absolute;
+		left: -10px;
+	}
+
+	& a:hover::after {
+		content: ")";
+		position: absolute;
+		right: -10px;
+	}
+}

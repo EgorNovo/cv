@@ -1,0 +1,46 @@
+// Основная структура проекта
+// src/
+//   components/
+//     Header.tsx
+//     About.tsx
+//     Skills.tsx
+//     Experience.tsx
+//     Education.tsx
+//     Contact.tsx
+//   App.tsx
+//   main.tsx
+
+// Базовая разметка в App.tsx
+import { Canvas } from '@react-three/fiber';
+import { Suspense } from 'react';
+import { OrbitControls } from '@react-three/drei';
+import { motion } from 'framer-motion';
+import Header from './components/Header';
+import About from './components/About';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Education from './components/Education';
+import Contact from './components/Contact';
+
+function App() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Header />
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+        <About />
+        <Skills />
+        <Experience />
+        <Education />
+        <Contact />
+      </motion.div>
+      <Canvas className="absolute top-0 left-0 w-full h-full">
+        <Suspense fallback={null}>
+          <OrbitControls />
+          {/* Тут можно добавить 3D-объекты */}
+        </Suspense>
+      </Canvas>
+    </div>
+  );
+}
+
+export default App;

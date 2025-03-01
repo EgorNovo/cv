@@ -1,0 +1,13 @@
+.cover {
+	display: flex;
+
+	& h1 {
+		font-weight: 400;
+		font-size: 60px;
+
+		& .effect {
+			font-weight: 800;
+		}
+	}
+
+}
