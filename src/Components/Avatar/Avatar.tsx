@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styles from "./Avatar.module.scss";
 
-type TAvatarProps = {
+export type TAvatarProps = {
   fill?: string;
   width?: string;
   height?: string;

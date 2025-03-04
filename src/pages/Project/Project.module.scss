@@ -1,0 +1,27 @@
+.content {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  & .header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  & .item {
+    list-style-type: lower-greek;
+  }
+
+  & .link {
+    margin-inline-start: 10px;
+    color: #474e56;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+	& .link:hover {
+		color: #6d4363;
+	}
+}
