@@ -1,0 +1,57 @@
+//@use '../../styles/variables.scss'  as *;
+
+.content {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  & .grid {
+    display: grid;
+    grid-template-columns: 4fr;
+    grid-template-rows: 4fr;
+
+    & .test {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      //border: 1px solid white;
+      font-size: 45px;
+    }
+
+    & .TwoOne {
+      grid-column-start: 0;
+      grid-column-end: 1;
+      grid-row-start: 0;
+      grid-row-end: 1;
+    }
+
+    & .ThreeOne {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+
+    & .FourOne {
+      grid-column-start: 3;
+      grid-row-start: 3;
+    }
+
+    & a {
+      margin: 0;
+      padding-top: 12px;
+    }
+
+    & svg {
+      //fill: white;
+      //fill: cu;
+
+      &:hover {
+        fill: rgb(165, 165, 165);
+      }
+    }
+  }
+}

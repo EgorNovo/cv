@@ -1,3 +1,5 @@
+@use "../../styles/variables.scss" as *;
+
 .side,
 .container {
   width: 250px;
@@ -14,7 +16,8 @@
   position: absolute;
   width: 250px;
   height: 250px;
-  border: 2px solid white;
+  color: inherit;
+  border: 2px solid currentColor;
   //opacity: .7
 }
 

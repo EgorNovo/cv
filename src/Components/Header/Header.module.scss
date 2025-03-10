@@ -1,21 +1,32 @@
 .navigation {
-	position: fixed;
-	width: calc(100% - 100px);
-	display: flex;
-	justify-content: space-between;
-	background-color: black;
-	z-index: 2;
+  position: fixed;
+  margin: 0 auto;
+  min-width: 320px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  background-color: initial;
+  z-index: 25;
 }
 
 .list {
-	display: flex;
-	gap: 40px;
-	align-items: center;
-	margin-inline-end: 50px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-inline-end: 50px;
 }
 
 .title {
-	font-size: 35px;
-	color: white;
+  font-size: 35px;
+  color: inherit;
 }
 
+.leftSide {
+  display: flex;
+  height: 100%;
+  align-items: baseline;
+  gap: 30px;
+  font-size: 35px;
+
+}

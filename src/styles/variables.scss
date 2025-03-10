@@ -1,0 +1,17 @@
+$main-color-light: white;
+$font-color-light: black;
+$main-color-dark: black;
+$font-color-dark: white;
+
+$main-color: black;
+$font-color: white;
+
+.dark {
+  $main-color: black;
+  $font-color: white;
+}
+
+.light {
+  $main-color: white;
+  $font-color: black;
+}
