@@ -1,18 +1,22 @@
-import { FC } from 'react'
-import styles from './Cover.module.scss'
+import { FC } from "react";
+import { useSelector } from "../../store/store";
+import styles from "./Cover.module.scss";
 
-//const h1 = ['hi','my name is Egor']
+const Cover: FC = () => {
+  const content = useSelector((state) => state.contentReducer.cover);
 
-const Cover:FC = () => {
-	return (
-		<div className={styles.cover}>
-			<h1>
-				<span className={styles.effect}>Hi</span><br/>
-				my name is <span className={styles.effect}>Egor</span><br/>
-				a frontend <span className={styles.effect}>&lt;developer /&gt;</span>
-			</h1>
-		</div>
-	)
-}
+  return (
+    <div className={styles.cover}>
+      <h1>
+        <span className={styles.effect}>{content[0]}</span>
+        <br />
+        {content[1]} <span className={styles.effect}>{content[2]}</span>
+        <br />
+        {content[3]}{" "}
+        <span className={styles.effect}>&lt;{content[4]} /&gt;</span>
+      </h1>
+    </div>
+  );
+};
 
-export default Cover
+export default Cover;

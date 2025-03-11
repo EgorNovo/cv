@@ -4,16 +4,12 @@ import Contact from "./pages/Contacts/Contact";
 import Introduce from "./pages/Introduce/Introduce";
 import Project from "./pages/Project/Project";
 import Skills from "./pages/Skills/Skills";
+import { useSelector } from "./store/store";
 import styles from "./styles/App.module.scss";
 
-const links = [
-  { url: "#about", title: "About me" },
-  { url: "#skills", title: "Skills" },
-  { url: "#project", title: "Project" },
-  { url: "#contacts", title: "Contacts" },
-];
-
 function App() {
+  const links = useSelector((state) => state.contentReducer.header);
+
   return (
     <div className={styles.page}>
       <Header links={links} />

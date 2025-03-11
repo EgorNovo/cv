@@ -1,6 +1,8 @@
 .label {
-  display: inline;
-}
+  display: flex;
+	align-items: center;
+} 
+
 .ratio {
   visibility: hidden;
   width: 0;
