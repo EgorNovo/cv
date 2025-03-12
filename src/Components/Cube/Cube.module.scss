@@ -53,3 +53,9 @@
     transform: rotateZ(45deg) rotateX(360deg) rotateY(-360deg);
   }
 }
+
+@media (width < 800px) {
+  .container {
+    display: none;
+  }
+}

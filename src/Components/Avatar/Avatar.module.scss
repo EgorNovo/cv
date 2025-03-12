@@ -3,3 +3,9 @@
   display: block;
   fill: inherit;
 }
+
+@media (width < 800px) {
+  .avatar {
+    display: none;
+  }
+}

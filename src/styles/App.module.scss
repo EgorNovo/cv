@@ -4,3 +4,10 @@
   max-width: 1440px;
   margin: 0 auto;
 }
+
+@media (width < 800px) {
+  .page {
+    margin-inline: 0;
+    padding: 0 10px;
+  }
+}

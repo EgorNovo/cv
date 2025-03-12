@@ -1,20 +1,19 @@
 import clsx from "clsx";
-import { createContext, FC, ReactNode, useState } from "react";
+import { FC, ReactNode, useEffect, useState } from "react";
 import "../styles/index.scss";
-
-type TThemeContext = {
-  theme?: string;
-  setTheme?: React.Dispatch<React.SetStateAction<string>>;
-};
-
-export const ThemeContext = createContext<TThemeContext>({});
+import { getTheme } from "../utils/utils";
+import { ThemeContext } from "./context";
 
 type TTheme = {
   children: ReactNode;
 };
 
 const ThemeProvider: FC<TTheme> = ({ children }) => {
-  const [theme, setTheme] = useState<string>("light");
+  const [theme, setTheme] = useState<string>(getTheme());
+
+  useEffect(() => {
+    localStorage.setItem("Theme", theme);
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

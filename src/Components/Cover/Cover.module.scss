@@ -1,13 +1,20 @@
 .cover {
-	display: flex;
+  display: flex;
 
-	& h1 {
-		font-weight: 400;
-		font-size: 60px;
+  & h1 {
+    font-weight: 400;
+    font-size: 60px;
 
-		& .effect {
-			font-weight: 800;
-		}
-	}
+    & .effect {
+      font-weight: 800;
+    }
+  }
+}
 
+@media (width < 800px) {
+  .cover {
+    & h1 {
+      font-size: 30px;
+    }
+  }
 }
