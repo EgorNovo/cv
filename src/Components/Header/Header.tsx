@@ -2,7 +2,8 @@ import { FC, useContext } from "react";
 import { ThemeContext } from "../../context/context";
 import { toggle } from "../../store/slice/content";
 import { useDispatch, useSelector } from "../../store/store";
-import Link, { TLink } from "../Link/Link";
+import { TLink } from "../Link/Link";
+import Menu from "../Menu/Menu";
 import ThemeToggler from "../ThemeToggler/ThemeToggler";
 import styles from "./Header.module.scss";
 
@@ -35,12 +36,7 @@ export const Header: FC<THeaderProps> = ({ links }) => {
           {lan === "en" ? "Ru" : "En"}
         </button>
       </span>
-      <div className={styles.burger}></div>
-      <ul className={styles.list}>
-        {links.map((link, i) => (
-          <Link key={i} url={link.url} title={link.title} />
-        ))}
-      </ul>
+      <Menu links={links} />
     </nav>
   );
 };

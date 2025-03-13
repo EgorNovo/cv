@@ -1,0 +1,39 @@
+.burger {
+  position: relative;
+  border: none;
+  //display: none;
+}
+
+.list {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-block: 40px;
+  padding-right: 50px;
+}
+
+.burgerMenu {
+}
+
+@media (width < 800px) {
+  .burger {
+    display: block;
+    border: 1px solid currentColor;
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+  }
+
+  .list {
+    position: absolute;
+    display: none;
+    right: 50px;
+    width: 80px;
+    height: 200px;
+    padding-right: 0;
+  }
+
+  .burgerMenu {
+    display: block;
+  }
+}

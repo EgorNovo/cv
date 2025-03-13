@@ -8,18 +8,7 @@
   justify-content: space-between;
   z-index: 9999;
 
-  & .burger {
-    position: relative;
-    display: none;
-  }
-
-  & .list {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    margin-block: 40px;
-  }
-
+  
   & .title {
     font-size: 35px;
     color: inherit;
@@ -30,6 +19,7 @@
     align-items: center;
     gap: 30px;
     font-size: 35px;
+    padding-left: 50px;
 
     & p {
       margin: 0;
@@ -62,10 +52,12 @@
 
     & .leftSide {
       gap: 0px;
+      padding-left: 0;
     }
 
     & .list {
       display: none;
+      padding-right: 0;
     }
 
     & .title {
